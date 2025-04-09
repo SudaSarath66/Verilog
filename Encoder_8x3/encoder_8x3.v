@@ -1,0 +1,30 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:Sarath kumar Suda 
+// 
+// Design Name: 
+// Module Name: encoder_8x3
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module encoder_8x3(d, a, b, c);
+    input [7:0] d;
+    output a, b, c;
+
+    assign a = d[4] | d[5] | d[6] | d[7];
+    assign b = d[2] | d[3] | d[6] | d[7];
+    assign c = d[1] | d[3] | d[5] | d[7];
+endmodule
+
